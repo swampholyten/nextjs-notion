@@ -170,7 +170,8 @@ export const fathomConfig = fathomId
 
 export const posthogId = process.env.NEXT_PUBLIC_POSTHOG_ID
 export const posthogConfig: Partial<PostHogConfig> = {
-  api_host: 'https://app.posthog.com'
+  api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://eu.i.posthog.com',
+  person_profiles: 'identified_only'
 }
 
 function cleanPageUrlMap(
