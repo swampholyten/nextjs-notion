@@ -100,6 +100,13 @@
   border-color: #c9510c;
 }
 
+.paypal .actionBgPane {
+  background: #1c652e;
+}
+.paypal:hover {
+  border-color: #1c652e;
+}
+
 .youtube .actionBgPane {
   background: #ff0000;
 }

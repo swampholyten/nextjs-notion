@@ -17,6 +17,7 @@ export interface SiteConfig {
   youtube?: string
   zhihu?: string
   mastodon?: string
+  paypal?: string
 
   defaultPageIcon?: string | null
   defaultPageCover?: string | null
