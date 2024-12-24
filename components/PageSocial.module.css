@@ -114,6 +114,13 @@
   border-color: #ff0000;
 }
 
+.kofi .actionBgPane {
+  background: #346b6d;
+}
+.kofi:hover {
+  border-color: #346b6d;
+}
+
 .medium .actionBgPane {
   background: #00ab6c;
 }

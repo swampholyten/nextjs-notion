@@ -21,6 +21,7 @@ export default siteConfig({
   github: 'swampholyten',
   linkedin: 'junkai-ji-3a73bb267',
   paypal: 'JunkaiJi',
+  kofi: 'jiorno',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
@@ -61,6 +62,10 @@ export default siteConfig({
     {
       title: 'Contact',
       pageId: '15f8d03cada7813e8357dda7c9576590'
+    },
+    {
+      title: 'Donate',
+      pageId: '1658d03cada780c6984ee3712c4cc653'
     }
   ]
 })
