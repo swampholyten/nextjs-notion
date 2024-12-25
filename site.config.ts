@@ -9,7 +9,7 @@ export default siteConfig({
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: "Junkai's Blog",
+  name: 'Junkai Ji - Web Developer',
   domain: 'junkai.org',
   author: 'Junkai Ji',
 
