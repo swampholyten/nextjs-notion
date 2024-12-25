@@ -62,10 +62,6 @@ export default siteConfig({
     {
       title: 'Contact',
       pageId: '15f8d03cada7813e8357dda7c9576590'
-    },
-    {
-      title: 'Donate',
-      pageId: '1658d03cada780c6984ee3712c4cc653'
     }
   ]
 })

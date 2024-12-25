@@ -46,9 +46,8 @@
 
 .footer {
   width: 100%;
-  max-width: 1100px;
   margin: auto auto 0;
-  padding: 8px;
+  padding: 8px 1rem;
 
   display: flex;
   flex-direction: row;
@@ -116,6 +115,10 @@
 
 .newsletter:hover {
   color: #777777;
+}
+
+.kofi:hover {
+  color: #6f26a7;
 }
 
 .comments {

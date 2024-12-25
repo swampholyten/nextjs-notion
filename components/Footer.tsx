@@ -1,10 +1,9 @@
-import { FaEnvelopeOpenText } from '@react-icons/all-files/fa/FaEnvelopeOpenText'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
-import { FaMastodon } from '@react-icons/all-files/fa/FaMastodon'
+import { FaMugHot } from '@react-icons/all-files/fa/FaMugHot'
 import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
 import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube'
-import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
+import clsx from 'clsx'
 import * as React from 'react'
 
 import * as config from '@/lib/config'
@@ -13,7 +12,7 @@ import styles from './styles.module.css'
 
 // TODO: merge the data and icons from PageSocial with the social links in Footer
 
-export function FooterImpl() {
+export function FooterImpl({ className }) {
   const [, setHasMounted] = React.useState(false)
   const currentYear = new Date().getFullYear()
 
@@ -22,9 +21,23 @@ export function FooterImpl() {
   }, [])
 
   return (
-    <footer className={styles.footer}>
+    <footer className={clsx(styles.footer, className)}>
       <div className={styles.copyright}>
         Copyright {currentYear} {config.author}
+      </div>
+
+      <div className={styles.social}>
+        {config.kofi && (
+          <a
+            className={styles.kofi}
+            href={`https://ko-fi.com/${config.kofi}`}
+            title={`Kofi @${config.kofi}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaMugHot />
+          </a>
+        )}
       </div>
 
       <div className={styles.social}>
@@ -37,29 +50,6 @@ export function FooterImpl() {
             rel='noopener noreferrer'
           >
             <FaTwitter />
-          </a>
-        )}
-
-        {config.mastodon && (
-          <a
-            className={styles.mastodon}
-            href={config.mastodon}
-            title={`Mastodon ${config.getMastodonHandle()}`}
-            rel='me'
-          >
-            <FaMastodon />
-          </a>
-        )}
-
-        {config.zhihu && (
-          <a
-            className={styles.zhihu}
-            href={`https://zhihu.com/people/${config.zhihu}`}
-            title={`Zhihu @${config.zhihu}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaZhihu />
           </a>
         )}
 
@@ -84,18 +74,6 @@ export function FooterImpl() {
             rel='noopener noreferrer'
           >
             <FaLinkedin />
-          </a>
-        )}
-
-        {config.newsletter && (
-          <a
-            className={styles.newsletter}
-            href={`${config.newsletter}`}
-            title={`Newsletter ${config.author}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaEnvelopeOpenText />
           </a>
         )}
 

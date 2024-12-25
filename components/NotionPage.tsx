@@ -30,6 +30,7 @@ import { Page404 } from './Page404'
 import { PageAside } from './PageAside'
 import { PageHead } from './PageHead'
 import styles from './styles.module.css'
+import { Utterances } from './Utterances'
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
@@ -210,8 +211,6 @@ export function NotionPage({
     [block, recordMap, isBlogPost]
   )
 
-  const footer = React.useMemo(() => <Footer />, [])
-
   if (router.isFallback) {
     return <Loading />
   }
@@ -288,7 +287,14 @@ export function NotionPage({
         mapImageUrl={mapImageUrl}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
-        footer={footer}
+      />
+
+      {pageId !== site.rootNotionPageId && (
+        <Utterances theme={isDarkMode ? 'github-dark' : 'github-light'} />
+      )}
+
+      <Footer
+        className={isDarkMode ? 'dark-mode-footer' : 'light-mode-footer'}
       />
 
       <GitHubShareButton />
