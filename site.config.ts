@@ -59,9 +59,13 @@ export default siteConfig({
       title: 'About',
       pageId: '1608d03cada7804c82d8fdf5be845d9d'
     },
+    // {
+    //   title: 'Contact',
+    //   pageId: '15f8d03cada7813e8357dda7c9576590'
+    // },
     {
-      title: 'Contact',
-      pageId: '15f8d03cada7813e8357dda7c9576590'
+      title: 'Donate',
+      pageId: '1658d03cada780c6984ee3712c4cc653'
     }
   ]
 })

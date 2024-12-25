@@ -37,7 +37,11 @@ body {
   position: relative;
 }
 
-.static-tweet blockquote {
+.notion-row:has(.notion-column a) {
+  display: none;
+}
+
+.notion-row .static-tweet blockquote {
   margin: 0;
   margin-block-start: 0;
   margin-block-end: 0;
